@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
+
+body{
+    font-family: Roboto;
+    background-color: #EEF9BF;
+}
+* {
+    box-sizing: border-box;
+}
+h1{
+    font-size: 56px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 40px;
+    color: #75B79E;
+}
+.conteudo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.cartas {
+    width: 80%;
+    height: 600px;
+    background-color: green;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.carta{
+    width: 117px;
+    height: 146px;
+    background-color: #99CEA8;
+    border: 1px solid #99CEA8;
+    border-radius: 5px;
+}
