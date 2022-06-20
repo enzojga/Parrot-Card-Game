@@ -108,7 +108,7 @@ function distribuiCartas(quantidadeCartas){
 }
 
 function perguntaPares(){
-    par = Number(prompt("Insira a quantidade de cartas que voce quer jogar"));
+    par = Number(prompt("Insira a quantidade de cartas que voce quer jogar(Apenas numeros pares de 4 a 14)"));
     if(par%2 !== 0 || isNaN(par) || par === 0 ){
         perguntaPares();
     }else if(par >=4 && par <=14){
