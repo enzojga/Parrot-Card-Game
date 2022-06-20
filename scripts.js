@@ -1,5 +1,26 @@
 let contadorFinal = 0;
 let numeroJogadas = 0;
+let tempo=0;
+function jogarNovamente(){
+    let novoJogo = prompt('Deseja jogar novamente?');
+    if(novoJogo === 'sim'){
+        let documento = document.querySelector('.cartas');
+        documento.innerHTML = '';
+        perguntaPares();
+        contadorFinal = 0;
+        numeroJogadas = 0;
+        tempo=0;
+    }else if(novoJogo === 'não'){
+        alert('Obrigado por jogar');
+    }
+}
+function finalizarJogo(){
+    if(contadorFinal === par){
+        let segundos = document.querySelector('.contador').innerHTML;
+        alert(`Parabens voce ganhou em ${numeroJogadas} jogadas e em ${segundos} segundos`);
+        jogarNovamente();
+    }
+}
 function adicionaCartas(array){
     for(i = 0; i < array.length; i++){
         let cartas = document.querySelector('.cartas');
@@ -7,6 +28,10 @@ function adicionaCartas(array){
         console.log(array[i]);
     }
     console.log(array.length);
+}
+function temporizador() {
+    tempo++;
+    document.querySelector(".contador").innerHTML = tempo;
 }
 function comparador() { 
 	return Math.random() - 0.5; 
@@ -20,20 +45,13 @@ function desviraCarta(cartasViradas){
     carta2.classList.add('back-face');
 
 }
-function geraNumeroRandom(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
-  function viraCarta(carta){
+function viraCarta(carta){
     carta.classList.add('virada')
     let cartaSelecionada = carta.querySelector(' :nth-child(2)');
     cartaSelecionada.classList.remove('back-face');
     numeroJogadas++;
     verificaVirada();
-    if(contadorFinal === par){
-        alert(`Parabens voce ganhou em ${numeroJogadas} jogadas`);
-    }
+   setTimeout(finalizarJogo,0500);
 }
 function verificaVirada(){
     let cartasViradas = document.querySelectorAll('.virada');
@@ -100,6 +118,6 @@ function perguntaPares(){
     }
     return par;
 }
-
+setInterval(temporizador,1000);
 perguntaPares();
 
