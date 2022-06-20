@@ -17,7 +17,7 @@ function jogarNovamente(){
 function finalizarJogo(){
     if(contadorFinal === par){
         let segundos = document.querySelector('.contador').innerHTML;
-        alert(`Parabens voce ganhou em ${numeroJogadas} jogadas e em ${segundos} segundos`);
+        alert(`Parabéns você ganhou em ${numeroJogadas} jogadas e em ${segundos} segundos`);
         jogarNovamente();
     }
 }
@@ -108,7 +108,7 @@ function distribuiCartas(quantidadeCartas){
 }
 
 function perguntaPares(){
-    par = Number(prompt("Insira a quantidade de cartas que voce quer jogar(Apenas numeros pares de 4 a 14)"));
+    par = Number(prompt("Insira a quantidade de cartas que você quer jogar(Apenas números pares de 4 a 14)"));
     if(par%2 !== 0 || isNaN(par) || par === 0 ){
         perguntaPares();
     }else if(par >=4 && par <=14){
