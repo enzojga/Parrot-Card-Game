@@ -87,6 +87,9 @@ h1{
     .card{
       margin-right: 0;
     }
+    .contador{
+      position: fixed;
+    }
 }
 
   /*.card:hover .back-face {

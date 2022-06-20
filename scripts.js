@@ -70,7 +70,7 @@ function verificaVirada(){
 
 function distribuiCartas(quantidadeCartas){
     let cartas = document.querySelector('.cartas');
-    const img = '<img src="/imagens/front.png" alt="">'
+    const img = '<img src="imagens/front.png" alt="">'
     const array = [];
     let contador = 0;
     max = quantidadeCartas -1;
@@ -79,7 +79,7 @@ function distribuiCartas(quantidadeCartas){
                         <div class="front-face face">${img}
                         </div>
                         <div class="back-face face" data-identifier="back-face">
-                            <img src="/imagens/gif${contador}.gif" alt="">
+                            <img src="imagens/gif${contador}.gif" alt="">
                         </div>
                     </div>`;
 
